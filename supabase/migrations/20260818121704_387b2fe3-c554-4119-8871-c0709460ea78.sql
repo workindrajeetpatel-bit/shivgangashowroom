@@ -1,0 +1,1 @@
+delete from public.products where name = 'Test Upload Basin';
