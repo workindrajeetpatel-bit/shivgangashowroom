@@ -10,6 +10,7 @@ export function FloatingWhatsApp() {
       aria-label="Chat with Shivganga Sanitary Ware and Panels on WhatsApp"
       className="group fixed bottom-5 right-5 z-50 inline-flex items-center gap-2.5 rounded-full bg-whatsapp px-4 py-4 text-whatsapp-foreground shadow-[var(--shadow-float)] transition-all duration-300 hover:-translate-y-1 sm:px-5"
     >
+
       <span
         aria-hidden
         className="absolute inset-0 -z-10 animate-ping rounded-full bg-whatsapp/40 [animation-duration:2.8s]"
