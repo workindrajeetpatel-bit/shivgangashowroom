@@ -29,6 +29,8 @@ export const listProducts = createServerFn({ method: "GET" })
       const { data: rows, error } = await query;
       if (error) {
         logProductError("list", error);
+        // Detailed log to identify the root cause (e.g., RLS policy blocking anon reads).
+        console.error("[products:list] Supabase error code:", error.code, "| message:", error.message, "| hint:", error.hint);
         return { configured: true, products: [], error: GENERIC_PRODUCT_ERROR };
       }
       const products = await withSignedImages((rows ?? []).map(shapeProduct));
