@@ -14,4 +14,7 @@ export default defineConfig({
       maxAge: 31536000,
     },
   ],
+  externals: {
+    inline: ["tslib", "@supabase/supabase-js"],
+  },
 });
